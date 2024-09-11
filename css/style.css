@@ -3,6 +3,7 @@
 @import url(reset.css);
 @import url(font.css);
 
+h2, h3, h4, h5, h6 {font-family: serif; font-family: 'Cafe24ClassicType-Regular';}
 section {width: 100%; height: 100vh;}
 .num {position: fixed; top: 0; left: 0; font-size: 50px; border: 1px solid #000; width: 100px;height: 100px; z-index: 7; display: flex; justify-content: center; align-items: center;}
 #section1 {height: 5000px; border-bottom: 0px solid red; z-index: 1;}
@@ -21,12 +22,43 @@ section {width: 100%; height: 100vh;}
 /* #section2 {height: 4000px; border-bottom: 1px solid red; transform: scale(1); position: relative; top: 4000px;}*/
 #section2 .bg {position: absolute; width: 100%; height: 100vh; top: 0; left: 0; background: url('../images/main2_cloud.jpg'); background-size: cover;} 
 
-#section2 .big_text {position: absolute; width: 100%; bottom: 0; z-index: 2; transform-origin: 550px 200px;}
+#section2 .big_text {position: absolute; width: 100%; bottom: 0; z-index: 2; transform-origin: 550px 200px; z-index: -1;}
 #section2 .big_text img {width: 100%;}
 
-#section2 .content_box {width: 100%; height: 100vh; position: absolute; align-items: center; justify-content: center;}
-#section2 .content_box .img_box {position: absolute; top: 50%; left: 50%; transform:translate(-50%,-50%);  transform-origin: center;}
-#section2 .content_box .img_box:before {content: ""; position: absolute; width: 100%; height: 360px; background: #000; bottom: 0; border-radius: 50px; z-index: 2;}
-#section2 .content_box .img_box img {position: relative;z-index: 3; }
+#section2 .content_box {width: 100%; height: 100vh; position: absolute; align-items: center; justify-content: center; transition: 0.3s;}
+#section2 .content_box.on { background: #6d92d8;}
+#section2 .content_box .img_box {position: absolute; top: 43%; left: 50%; transform:scale(0.5) translate(-50%,-50%); transform-origin: -550px 200px; display: flex; gap: 130px; transition: 0.3s;}
 
-#section2 .content_box .arrow {position: absolute; top: 70%; left: 50%; transform: translateX(-50%); width: 70px; height: 70px; background: #6aaad1; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 40px; color: #fff;}
+#section2 .content_box .img_box img {position: relative;z-index: 3; bottom: -1px; }
+#section2 .content_box .img_box .info  {display: none;}
+#section2 .content_box .img_box .info .title {font-size: 55px; font-family: 'Cafe24ClassicType-Regular'; color: #fff;}
+#section2 .content_box .img_box .info .title i {color: #e1c4da;}
+#section2 .content_box .img_box .info p {font-size: 26px; color: #fff; margin: 0px 0; font-family: 'SpoqaHanSansNeo-Regular'; text-indent: 10px;}
+#section2 .content_box .img_box .profile_img {width: 471px; height: 630px; position: relative;}
+#section2 .content_box .img_box .profile_img:before {content: ""; position: absolute; width: 100%; height: 360px; background: #d7e7fd; bottom: 0; border-radius: 50px; z-index: 2;}
+#section2 .content_box .arrow {height: 70px; display: flex; justify-content: center; align-items: center; font-size: 24px; color: #fff; text-align: center; cursor: pointer; letter-spacing: 0.1em;}
+#section2 .content_box .arrow span {font-size: 30px; }
+#section2 .content_box .arrow i {color: #e1c4da;}
+
+#section2 .content_box .img_box .info_text {padding-left: 50px; border-left: 5px solid #e7fe8e; margin-top: 280px; height: 470px; display: none;}
+#section2 .content_box .img_box .info_text h3 {font-size: 50px; color: #fff; margin-bottom: 30px;}
+#section2 .content_box .img_box .info_text h3 i {color: #e1c4da;}
+#section2 .content_box .img_box .info_text div {margin-bottom: 70px; }
+#section2 .content_box .img_box .info_text ul {display: flex; flex-wrap: wrap; gap: 20px; }
+#section2 .content_box .img_box .info_text ul li {font-size: 26px; color: #fff; }
+#section2 .content_box .img_box .info_text ul.icon li:nth-child(2) {width: 40%;}
+#section2 .content_box .img_box .info_text ul.icon li {width: 25%;}
+
+
+
+
+
+
+#section3 {position: absolute; top: 9000px; background: url('../images/main3_cloud.jpg'); z-index: 3; }
+/* #section3 {height: 4000px; border-bottom: 1px solid red; transform: scale(1); position: relative; top: 4000px;}*/
+#section3 .bg {position: absolute; width: 100%; height: 100vh; top: 0; left: 0; background: url('../images/main3_cloud.jpg'); background-size: cover; } 
+
+#section3 .big_text {position: absolute; width: 100%; bottom: 0; z-index: 2; transform-origin: 550px 200px; z-index: -1;}
+#section3 .big_text img {width: 100%; border: 1px solid #000; }
+
+#section3 .content_box {width: 100%; height: 100vh; position: absolute; align-items: center; justify-content: center; transition: 0.3s;}
